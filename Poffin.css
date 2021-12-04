@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    color: #333333;
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "PingFangSC-Regular", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c1272d;
+}
+
+a:active {
+    color: #f04e4d;
+}
+
+.title {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0 10px 0;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0 0 5px #333;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.berry_select {
+    margin: 10px 0 10px 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.berry_box {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 10px;
+}
+
+.berry_img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.berry_num {
+    display: none;
+    margin-top: 10px;
+}
+
+select {
+    margin: 20px 0 10px 0;
+    width: 10em;
+    outline: none;
+    border: solid 1px #aaaaaa;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.berry_info {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.berry_flex_row {
+    width: 4em;
+    height: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.kw_num {
+    padding-left: 10px;
+}
+
+.kw_info {
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    color: #ff3d40;
+    padding-top: 20px;
+}
+
+#kouwei_La { color: #f6686a; }
+#kouwei_Se { color: #749ef9; }
+#kouwei_Tian { color: #f776d6; }
+#kouwei_Ku { color: #3ad63f; }
+#kouwei_Suan { color: #ffcc33; }
+
+.flex_row {
+    padding-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.kouwei {
+    width: 4em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+}
+
+.button_box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+    width: 40%;
+    height: 2.3em;
+    line-height: 2.3em;
+    text-align: center;
+    background-color: #dddddd;
+    transition: background-color 0.5s, color 0.2s;
+}
+
+.button:hover {
+    color: white;
+    background-color: #aaaaaa;
+}
+
+.button:active {
+    color: white;
+    background-color: #666666;
+}

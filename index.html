@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Poffin.css" />
+    <script src="Poffin.js" charset="utf-8"></script>
+    <title>宝芬口味计算器</title>
+    </head>
+
+    <!-- 
+        数据整理：@谜芝果
+        程序制作：@勤劳的牧场主
+        信息参考：https://wiki.52poke.com/wiki/%E5%AE%9D%E8%8A%AC
+     -->
+
+    <body>
+        <div class="title flex_row_center">
+            <img src="logo.png" id="logo">
+            <div style="padding-left: 10px;">宝芬口味计算器</div>
+        </div>
+        <div class="berry_select">
+            <div class="berry_box">
+                <div class="berry_img">
+                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_1">
+                </div>
+                <div class="berry_num">树果一</div>
+                <select name="berry1" id="berry1" onchange="cal(1)"></select>
+            </div>
+            <div class="berry_box">
+                <div class="berry_img">
+                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_2">
+                </div>
+                <div class="berry_num">树果二</div>
+                <select name="berry2" id="berry2" onchange="cal(2)"></select>
+            </div>
+            <div class="berry_box">
+                <div class="berry_img">
+                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_3">
+                </div>
+                <div class="berry_num">树果三</div>
+                <select name="berry3" id="berry3" onchange="cal(3)"></select>
+            </div>
+            <div class="berry_box">
+                <div class="berry_img">
+                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_4">
+                </div>
+                <div class="berry_num">树果四</div>
+                <select name="berry4" id="berry4" onchange="cal(4)"></select>
+            </div>
+        </div>
+        <div class="berry_info">
+            <div class="berry_flex_row"></div>
+            <div class="berry_flex_row">
+                <div id="kouwei_La">辣</div>
+                <div class="kw_num" name="ShuaiQi" id="ShuaiQi"></div>
+            </div>
+            <div class="berry_flex_row">
+                <div id="kouwei_Se">涩</div>
+                <div class="kw_num" name="MeiLi" id="MeiLi"></div>
+            </div>
+            <div class="berry_flex_row">
+                <div id="kouwei_Tian">甜</div>
+                <div class="kw_num" name="KeAi" id="KeAi"></div>
+            </div>
+            <div class="berry_flex_row">
+                <div id="kouwei_Ku">苦</div>
+                <div class="kw_num" name="CongMing" id="CongMing"></div>
+            </div>
+            <div class="berry_flex_row">
+                <div id="kouwei_Suan">酸</div>
+                <div class="kw_num" name="QiangZhuang" id="QiangZhuang"></div>
+            </div>
+            <div class="berry_flex_row"></div>
+        </div>
+        <div class="flex_row"><div class="kouwei">口味</div><div name="KouWei" id="KouWei"></div></div>
+        <div class="flex_row"><div class="kouwei">润口度</div><div name="RunKou" id="RunKou"></div></div>
+        <div class="kw_info" id='kw_info'></div>
+        <div class="button_box">
+            <div class="button" onclick="cal(0)">计算</div>
+            <div class="button" onclick="clean()">清空</div>
+        </div>
+    </body>
+
+    <script>
+        for (var i in Berry) {
+            var option = '<option value="' + i + '">' + Berry[i]['序'] + "&nbsp;&nbsp;" + i + '</option>'
+            berry1.innerHTML=berry1.innerHTML+option
+            berry2.innerHTML=berry2.innerHTML+option
+            berry3.innerHTML=berry3.innerHTML+option
+            berry4.innerHTML=berry4.innerHTML+option
+        }
+    </script>
+</html>
