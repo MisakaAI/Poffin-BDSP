@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Berry.css" />
+    <script src="Berry.js" charset="utf-8"></script>
+    <title>BDSP树果信息</title>
+    </head>
+
+    <!-- 
+        数据整理：@谜芝果
+        程序制作：@勤劳的牧场主
+        信息参考：https://wiki.52poke.com/wiki/%E5%AE%9D%E8%8A%AC
+     -->
+
+    <body>
+        <div class="title flex_row_center">
+            <img src="berry/Dream_不放树果_Sprite.png" id="logo">
+            <div style="padding-left: 10px;">BDSP 树果信息</div>
+        </div>
+        <div class="berry">
+            <div class="berry_name flex_row">
+                <div class="img"><img src="" id="berry_img"></div>
+                <div class="flex_grow flex_column">
+                    <div id="name_CN"></div>
+                    <div id="name_JP"></div>
+                    <div id="name_EN"></div>
+                </div>
+            </div>
+            <div class="info" id="info"></div>
+            <div class="flex_row_s">
+                <div class="th">生长周期</div>
+                <div class="livespan" id="livespan"></div>
+            </div>
+            <div class="flex_row_s">
+                <div class="th">结果数量</div>
+                <div class="number" id="number"></div>
+            </div>
+            <div class="flex_row_s">
+                <div class="th">水分消耗</div>
+                <div class="water" id="water"></div>
+            </div>
+            <div class="flex_row_s">
+                <div class="th">最长浇水间隔</div>
+                <div class="max_watering_interval" id="max_watering_interval"></div>
+            </div>
+            <div class="flex_row_s">
+                <div class="th">最少浇水次数</div>
+                <div class="min_watering_times" id="min_watering_times"></div>
+            </div>
+            <div class="flex_row_s">
+                <div class="th">润口度</div>
+                <div class="RunKou" id="RunKou"></div>
+            </div>
+            <div class="kouwei">
+                <div class="flex_column">
+                    <div class="kw_th" id="kouwei_La">辣</div>
+                    <div class="kw_value" id="kw_La"></div>
+                </div>
+                <div class="flex_column">
+                    <div class="kw_th" id="kouwei_Se">涩</div>
+                    <div class="kw_value" id="kw_Se"></div>
+                </div>
+                <div class="flex_column">
+                    <div class="kw_th" id="kouwei_Tian">甜</div>
+                    <div class="kw_value" id="kw_Tian"></div>
+                </div>
+                <div class="flex_column">
+                    <div class="kw_th" id="kouwei_Ku">苦</div>
+                    <div class="kw_value" id="kw_Ku"></div>
+                </div>
+                <div class="flex_column">
+                    <div class="kw_th" id="kouwei_Suan">酸</div>
+                    <div class="kw_value" id="kw_Suan"></div>
+                </div>
+            </div>
+        </div>
+        <div class="button_box">
+            <a href="berry_list.html" class="button">树果列表</a>
+            <a href="index.html" class="button">宝芬口味</a>
+    </div>
+    </body>
+    <script>
+        var berry_name = decodeURIComponent(location.hash).substr(1)
+        var b = Berry[berry_name]
+        name_CN.innerText = berry_name
+        document.getElementById("berry_img").src="berry/Dream_" + berry_name + "_Sprite.png"
+        name_JP.innerText = b['日']
+        name_EN.innerText = b['英']
+        info.innerText = b['说明']
+        livespan.innerText = b['生长周期']
+        number.innerText = b['结果数量']
+        water.innerText = b['水分消耗']
+        max_watering_interval.innerText = b['最长浇水间隔']
+        min_watering_times.innerText = b['最少浇水次数']
+        RunKou.innerText = b['润']
+        kw_La.innerText = b['辣']
+        kw_Se.innerText = b['涩']
+        kw_Tian.innerText = b['甜']
+        kw_Ku.innerText = b['苦']
+        kw_Suan.innerText = b['酸']
+    </script>
+</html>

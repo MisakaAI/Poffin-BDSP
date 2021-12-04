@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Poffin.css" />
     <script src="Poffin.js" charset="utf-8"></script>
+    <script src="Berry.js" charset="utf-8"></script>
     <title>宝芬口味计算器</title>
     </head>
 
@@ -24,30 +25,38 @@
         </div>
         <div class="berry_select">
             <div class="berry_box">
-                <div class="berry_img">
-                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_1">
-                </div>
+                <a href="" id="href_1">
+                    <div class="berry_img">
+                        <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_1">
+                    </div>
+                </a>
                 <div class="berry_num">树果一</div>
                 <select name="berry1" id="berry1" onchange="cal(1)"></select>
             </div>
             <div class="berry_box">
-                <div class="berry_img">
-                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_2">
-                </div>
+                <a href="" id="href_2">
+                    <div class="berry_img">
+                        <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_2">
+                    </div>
+                </a>
                 <div class="berry_num">树果二</div>
                 <select name="berry2" id="berry2" onchange="cal(2)"></select>
             </div>
             <div class="berry_box">
-                <div class="berry_img">
-                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_3">
-                </div>
+                <a href="" id="href_3">
+                    <div class="berry_img">
+                        <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_3">
+                    </div>
+                </a>
                 <div class="berry_num">树果三</div>
                 <select name="berry3" id="berry3" onchange="cal(3)"></select>
             </div>
             <div class="berry_box">
-                <div class="berry_img">
-                    <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_4">
-                </div>
+                <a href="" id="href_4">
+                    <div class="berry_img">
+                        <img src="berry/Dream_不放树果_Sprite.png" id="berry_img_4">
+                    </div>
+                </a>
                 <div class="berry_num">树果四</div>
                 <select name="berry4" id="berry4" onchange="cal(4)"></select>
             </div>
@@ -82,6 +91,11 @@
         <div class="button_box">
             <div class="button" onclick="cal(0)">计算</div>
             <div class="button" onclick="clean()">清空</div>
+        </div>
+        <div class="annotate">※ 以上基础口味值仅供参考：<br><br>
+            宝芬制作时间少于1分钟会按比例提高最终口位值，制作时间大于1分钟会按比例降低最终口味值。<br><br>
+            制作过程中洒出或者烤糊会降低最终口味值，甚至让宝芬变成难吃宝芬。<br><br>
+            ※ 点击树果图标可以查看树果的详细信息，或查看<a href="berry_list.html">全部树果</a>。
         </div>
     </body>
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Berry.css" />
+    <script src="Berry.js" charset="utf-8"></script>
+    <title>BDSP树果信息</title>
+    </head>
+
+    <!-- 
+        数据整理：@谜芝果
+        程序制作：@勤劳的牧场主
+        信息参考：https://wiki.52poke.com/wiki/%E5%AE%9D%E8%8A%AC
+     -->
+
+    <body>
+        <div class="title flex_row_center">
+            <img src="berry/Dream_不放树果_Sprite.png" id="logo">
+            <div style="padding-left: 10px;">BDSP 全部树果</div>
+        </div>
+        <table class="berry_list">
+            <thead>
+                <tr>
+                    <th>序</th>
+                    <th>图</th>
+                    <th>名</th>
+                    <th>辣</th>
+                    <th>涩</th>
+                    <th>甜</th>
+                    <th>苦</th>
+                    <th>酸</th>
+                    <th>润</th>
+                </tr>
+            </thead>
+            <tbody id="berry_list"></tbody>
+        </table>
+    </body>
+    <script>
+        for (var i in Berry) {
+            if (i != "不放树果") {
+                berry_list.innerHTML+='<tr>\
+                    <td>' + Berry[i]["序"] + '</td>\
+                    <td><img class="table_img" src="berry_bag/Bag_' + i + '_Sprite.png"></td>\
+                    <td><a href="berry.html#' + i + '">' + i + '</a></td>\
+                    <td>' + Berry[i]["辣"] + '</td>\
+                    <td>' + Berry[i]["涩"] + '</td>\
+                    <td>' + Berry[i]["甜"] + '</td>\
+                    <td>' + Berry[i]["苦"] + '</td>\
+                    <td>' + Berry[i]["酸"] + '</td>\
+                    <td>' + Berry[i]["润"] + '</td>\
+                </tr>'
+            }
+        }
+    </script>
+</html>
