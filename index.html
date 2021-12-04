@@ -125,10 +125,16 @@
             if ( localStorage.berry4 == undefined ) {
                 localStorage.berry4="不放树果"
             }
-            berry1.value = localStorage.berry1
-            berry2.value = localStorage.berry2
-            berry3.value = localStorage.berry3
-            berry4.value = localStorage.berry4
+            list_ = ['1','2','3','4']
+            for (var i in list_) {
+                var n=list_[i]
+                berry1.value = localStorage.berry1
+                document.getElementById("berry"+n).value = localStorage["berry"+n]
+                document.getElementById("href_"+n).href="berry.html#" + localStorage["berry"+n]
+                if (localStorage["berry"+n] == "不放树果") {
+                    document.getElementById("href_" + n).style.pointerEvents="none"
+                }
+            }
             cal(0)
         }
     </script>
