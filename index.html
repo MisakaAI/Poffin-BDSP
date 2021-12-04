@@ -89,23 +89,46 @@
         <div class="flex_row"><div class="kouwei">润口度</div><div name="RunKou" id="RunKou"></div></div>
         <div class="kw_info" id='kw_info'></div>
         <div class="button_box">
-            <div class="button" onclick="cal(0)">计算</div>
             <div class="button" onclick="clean()">清空</div>
         </div>
         <div class="annotate">※ 以上基础口味值仅供参考：<br><br>
             宝芬制作时间少于1分钟会按比例提高最终口位值，制作时间大于1分钟会按比例降低最终口味值。<br><br>
             制作过程中洒出或者烤糊会降低最终口味值，甚至让宝芬变成难吃宝芬。<br><br>
-            ※ 点击树果图标可以查看树果的详细信息，或查看<a href="berry_list.html">全部树果</a>。
+            ※ 点击树果可以查看树果的详细信息，或查看<a href="berry_list.html">全部树果</a>。
         </div>
     </body>
 
     <script>
+
         for (var i in Berry) {
             var option = '<option value="' + i + '">' + Berry[i]['序'] + "&nbsp;&nbsp;" + i + '</option>'
             berry1.innerHTML=berry1.innerHTML+option
             berry2.innerHTML=berry2.innerHTML+option
             berry3.innerHTML=berry3.innerHTML+option
             berry4.innerHTML=berry4.innerHTML+option
+        }
+        // 本地存储检测
+        if (typeof(Storage) == "undefined") {
+            document.getElementById("subtitle").innerHTML='“你的浏览器不支持这个功能哦~”'
+        }
+        window.onload=function() {
+            if ( localStorage.berry1 == undefined ) {
+                localStorage.berry1="不放树果"
+            }
+            if ( localStorage.berry2 == undefined ) {
+                localStorage.berry2="不放树果"
+            }
+            if ( localStorage.berry3 == undefined ) {
+                localStorage.berry3="不放树果"
+            }
+            if ( localStorage.berry4 == undefined ) {
+                localStorage.berry4="不放树果"
+            }
+            berry1.value = localStorage.berry1
+            berry2.value = localStorage.berry2
+            berry3.value = localStorage.berry3
+            berry4.value = localStorage.berry4
+            cal(0)
         }
     </script>
 </html>

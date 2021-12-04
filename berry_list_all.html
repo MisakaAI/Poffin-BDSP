@@ -8,7 +8,16 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Berry.css" />
     <script src="Berry.js" charset="utf-8"></script>
-    <title>BDSP树果信息</title>
+    <title>BDSP树果信息 完全版</title>
+    <style>
+        table {
+            width: auto;
+            max-width: 100%;
+        }
+        th, td {
+            padding: 3px 10px 3px 10px;
+        }
+    </style>
     </head>
 
     <!-- 
@@ -20,25 +29,30 @@
     <body>
         <div class="title flex_row_center">
             <img src="berry/Dream_不放树果_Sprite.png" id="logo">
-            <div style="padding-left: 10px;">BDSP 全部树果</div>
+            <div style="padding-left: 10px;">BDSP 树果信息 完全版</div>
         </div>
-        <table class="berry_list">
+        <table>
             <thead>
                 <tr>
-                    <th>序</th>
-                    <th>图</th>
-                    <th>名</th>
+                    <th>序号</th>
+                    <th>图片</th>
+                    <th>名字</th>
+                    <th>生长周期</th>
+                    <th>结果数量</th>
+                    <th>水分消耗</th>
+                    <th>最长浇水间隔</th>
+                    <th>最少浇水次数</th>
                     <th>辣</th>
                     <th>涩</th>
                     <th>甜</th>
                     <th>苦</th>
                     <th>酸</th>
-                    <th>润</th>
+                    <th>润口度</th>
                 </tr>
             </thead>
             <tbody id="berry_list"></tbody>
         </table>
-        <div class="ToPC">查看<a href="berry_list_all.html" class="ToPC">完全版</a></div>
+        <div class="ToPC">查看<a href="berry_list.html" class="ToPC">精简版</a></div>
     </body>
     <script>
         for (var i in Berry) {
@@ -47,6 +61,11 @@
                     <td>' + Berry[i]["序"] + '</td>\
                     <td><img class="table_img" src="berry_bag/Bag_' + i + '_Sprite.png"></td>\
                     <td><a href="berry.html#' + i + '">' + i + '</a></td>\
+                    <td>' + Berry[i]["生长周期"] + '</td>\
+                    <td>' + Berry[i]["结果数量"] + '</td>\
+                    <td>' + Berry[i]["水分消耗"] + '</td>\
+                    <td>' + Berry[i]["最长浇水间隔"] + '</td>\
+                    <td>' + Berry[i]["最少浇水次数"] + '</td>\
                     <td>' + Berry[i]["辣"] + '</td>\
                     <td>' + Berry[i]["涩"] + '</td>\
                     <td>' + Berry[i]["甜"] + '</td>\

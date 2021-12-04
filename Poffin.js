@@ -2,6 +2,7 @@ function cal(n) {
 
     if ( n != 0) {
         var name = document.getElementById("berry" + n).value
+        localStorage['berry'+ n ] = name
         if ( name == "不放树果" ) {
             document.getElementById("berry_img_" + n).src="berry/Dream_" + name + "_Sprite.png"
             document.getElementById("href_" + n).href=""
@@ -11,6 +12,11 @@ function cal(n) {
             document.getElementById("href_" + n).href="berry.html#" + name
             document.getElementById("href_" + n).style.pointerEvents="auto"
         }
+    } else {
+        document.getElementById("berry_img_1").src="berry/Dream_" + localStorage['berry1'] + "_Sprite.png"
+        document.getElementById("berry_img_2").src="berry/Dream_" + localStorage['berry2'] + "_Sprite.png"
+        document.getElementById("berry_img_3").src="berry/Dream_" + localStorage['berry3'] + "_Sprite.png"
+        document.getElementById("berry_img_4").src="berry/Dream_" + localStorage['berry4'] + "_Sprite.png"
     }
 
     var La=Berry[berry1.value].辣+Berry[berry2.value].辣+Berry[berry3.value].辣+Berry[berry4.value].辣
@@ -171,24 +177,17 @@ function cal(n) {
 }
 
 function clean() {
-    berry1.value="不放树果"
-    berry2.value="不放树果"
-    berry3.value="不放树果"
-    berry4.value="不放树果"
+    localStorage.berry1="不放树果"
+    localStorage.berry2="不放树果"
+    localStorage.berry3="不放树果"
+    localStorage.berry4="不放树果"
     document.getElementById("href_1").style.pointerEvents="none"
     document.getElementById("href_2").style.pointerEvents="none"
     document.getElementById("href_3").style.pointerEvents="none"
     document.getElementById("href_4").style.pointerEvents="none"
-    document.getElementById("berry_img_1").src="berry/Dream_不放树果_Sprite.png"
-    document.getElementById("berry_img_2").src="berry/Dream_不放树果_Sprite.png"
-    document.getElementById("berry_img_3").src="berry/Dream_不放树果_Sprite.png"
-    document.getElementById("berry_img_4").src="berry/Dream_不放树果_Sprite.png"
-    document.getElementById("ShuaiQi").innerText=""
-    document.getElementById("MeiLi").innerText=""
-    document.getElementById("KeAi").innerText=""
-    document.getElementById("CongMing").innerText=""
-    document.getElementById("QiangZhuang").innerText=""
-    document.getElementById("KouWei").innerText=""
-    document.getElementById("RunKou").innerText=""
-    document.getElementById("kw_info").innerText=""
+    berry1.value = localStorage.berry1
+    berry2.value = localStorage.berry2
+    berry3.value = localStorage.berry3
+    berry4.value = localStorage.berry4
+    cal(0)
 }

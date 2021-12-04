@@ -169,6 +169,7 @@ a {
 }
 
 table {
+    margin-top: 20px;
     border-collapse: collapse;
     max-width: 800px;
 }
@@ -177,4 +178,14 @@ th,td{
     padding: 5px 0 5px 0;
     text-align: center;
     border: 1px solid #ddd;
+}
+
+.ToPC {
+    color: #aaa;
+    font-size: 0.8em;
+    height: 50px;
+    line-height: 50px;
+}
+a.ToPC:hover {
+    color: #0085c7;
 }
